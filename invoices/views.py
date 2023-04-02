@@ -23,7 +23,7 @@ from .mixins import InvoiceNotClosedMixin
 class InvoiceListView(LoginRequiredMixin,ListView):
     model = Invoice
     template_name = "invoices/main.html" #default invoice_list 
-    paginate_by = 2
+    paginate_by = 3
     context_object_name = 'qs'
 
     def get_queryset(self):
